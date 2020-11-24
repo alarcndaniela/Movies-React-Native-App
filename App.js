@@ -17,9 +17,7 @@ const App = () => {
           <Router></Router>
       </View>
     </LoadAssets>
-    
-  )
-
+  );
 };
 
 export default App; 

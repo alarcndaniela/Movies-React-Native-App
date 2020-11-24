@@ -58,7 +58,7 @@ export const DetailsScreen = ({ navigation, route }) => {
 
 
     return (
-        <ScrollView  style={styles.container} stickyHeaderIndices={[1]}>
+        <ScrollView  style={styles.container} stickyHeaderIndices={[5]}>
             <View style={styles.imageContainer}>
                 <Image 
                     style={[StyleSheet.absoluteFill, styles.cover]}
@@ -101,7 +101,7 @@ export const DetailsScreen = ({ navigation, route }) => {
                 <CastandCrew navigation={navigation} crew={crew} />
                 </View>
                 </View>
-            <View style={{height:600}}></View>
+            <View style={{height:10}}></View>
         </ScrollView>
     )
 };
@@ -119,7 +119,6 @@ const styles = StyleSheet.create({
     cover: {
         width: null,
         height: null,
-        zIndex: 8,
     },
     backdrop:{
         position: "absolute",
@@ -129,18 +128,17 @@ const styles = StyleSheet.create({
         right: 0,
         backgroundColor: constants.COLORS.PRIMARY,
         opacity: 0.7,
-        zIndex: 10,
+        zIndex: 9,
     },
 	content: {
 		position: 'relative',
 		width,
 		padding: 25,
-		paddingBottom: 0,
 		backgroundColor: constants.COLORS.LIGHT,
 		borderTopLeftRadius: 25,
 		borderTopRightRadius: 25,
 		top: -25,
-		zIndex: 10,
+        zIndex: 11,
 	},
     secondaryContent: {
         marginTop:50,
@@ -151,12 +149,14 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         marginStart: -20,
 		backgroundColor: constants.COLORS.LIGHT,
-		zIndex: 9,
+		zIndex: 10,
+		top: -25,
 	},
 
     titleContainer: {
         flexDirection: 'row',
         justifyContent: "space-between",
+    
     },
     numbersContainer: {
         flexDirection: 'row',
@@ -169,6 +169,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         flexWrap: "wrap",
         marginRight: 12,
+        fontSize: 16,
     },
     votes: {
         color: constants.COLORS.WARNING,
@@ -211,8 +212,8 @@ const styles = StyleSheet.create({
 		width: imageWidth,
 		height: imageHeight,
 		borderRadius: 16,
-		top: -90,
-		left: 0,
+		top: -80,
+		left: 25,
 	},
     starsContainer:{
         flexDirection: "row",

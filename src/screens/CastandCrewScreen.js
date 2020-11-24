@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, Pressable, Image, Dimensions, Platform  } from 'react-native';
-import { AntDesign, Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 
 import constants from "../utils/constants";
@@ -9,7 +9,7 @@ const {width} = Dimensions.get("window");
 
 import { ScrollView } from 'react-native-gesture-handler';
 
-export const CastandCrew = ({navigation, route}) => {
+export const CastandCrewScreen = ({navigation, route}) => {
     console.log(route.params)
     const {cast, crew} = route.params;
 
@@ -25,9 +25,9 @@ export const CastandCrew = ({navigation, route}) => {
     return (
         <ScrollView style={styles.container}> 
             <View style={styles.castContainer}>
-            {items.map((item, index) => 
-              <View key={index} style={styles.card}>
-                   { item.profile_path ? (
+                {items.map((item, index) => 
+                <View key={index} style={styles.card}>
+                    { item.profile_path ? (
                         <Image 
                             key={index}
                             resizeMode='cover' 
@@ -48,10 +48,9 @@ export const CastandCrew = ({navigation, route}) => {
                     <Text style={{textAlign:"center"}}>
                         {item.name}
                     </Text>
-              </View>    
+                </View>    
                 )}
-        
-            </View>
+             </View>
         </ScrollView>
     );
 };
@@ -59,6 +58,7 @@ const styles = StyleSheet.create({
     container: {
         paddingHorizontal:20,
         marginTop: Platform.OS == "ios" ? 0 : 20,
+        marginBottom: 70,
     },
     card:{
         width: (width - 40)/ 3,

@@ -1,5 +1,7 @@
 module.exports = {
 	SCREEN: {
+		MAIN: 'Main',
+		PROFILE: 'Profile',
 		HOME: 'Home',
 		DETAILS: 'k',
 		CASTANDCREW: "More info",
@@ -12,6 +14,7 @@ module.exports = {
 		LIGHT: '#FFFFFF',
 		PRIMARY: '#5FB1A2',
 		TEXT_COLOR: '#121212',
+		TEXT_COLOR2: '#AFB0B0',
 	},
 	SCREEN_DETAILS:{
 		

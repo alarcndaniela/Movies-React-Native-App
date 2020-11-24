@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, StyleSheet } from 'react-native'
-import { fontsName } from '../utils/fonts';
+import {fontsName} from '../utils/fonts';
 
 const TextCustom = ({fontFamily, ...props}) => {
     let textStyle;

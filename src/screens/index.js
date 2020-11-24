@@ -1,3 +1,4 @@
 export * from "./HomeScreen";
 export * from "./DetailsScreen.js";
-export * from "./CastandCrew";
+export * from "./CastandCrewScreen";
+export * from "./ProfileScreen"
